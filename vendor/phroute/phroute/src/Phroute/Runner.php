@@ -17,6 +17,7 @@ class Runner
     var $_path_masked;
     var $is_masked_uri;
     var $config;
+    var $main_view;
 
     public function home($module = '')
     {
