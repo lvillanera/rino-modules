@@ -1,6 +1,6 @@
 <?php
 namespace App\Login\Fe\Services;
-
+use \App\Login\Fe\Models\User;
 class AuthService
 {
     public function authenticate($email, $password)
@@ -11,7 +11,7 @@ class AuthService
             return false;
         }
 
-        return password_verify($password, $user['password']);
+        return password_verify($password, $user->password);
     }
 }
 
